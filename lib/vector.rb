@@ -6,7 +6,7 @@ class MyVector < Vector
     self.y = y
   end
 
-  def calculate(point, *others = nil)
+  def calculate(point, *others)
     distance = Math.sqrt(((self[0] - point[0])**2) + ((self[1] - point[1])**2))
     if others != nil
       i = 1
@@ -17,4 +17,8 @@ class MyVector < Vector
     end
     distance
   end
+
+
+
+
 end

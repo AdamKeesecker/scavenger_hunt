@@ -1,12 +1,12 @@
 require_relative '../lib/vector'
 
-RSpec.describe Vector do
-  context ".calculate" do
-    it "should find the distance between two points" do
-      v1 = Vector.new(1,1)
-      v2 = Vector.new(2,2)
-      expected = calculate(v1, v2)
-      actual = 1
-    end
+class VectorTest < MiniTest::Unit::TestCase
+
+  def test_add_integer_to_vector
+    @vector = Vector[1,1]
+    @vector += 1
+    assert_equal @vector.x, 2
+    assert_equal @vector.y, 2
   end
+
 end

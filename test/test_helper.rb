@@ -1,6 +1,6 @@
 $LOAD_PATH << 'lib'
 require 'minitest/autorun'
-require '../lib/vector'
+require_relative '../lib/vector'
 
 
 

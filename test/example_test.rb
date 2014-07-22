@@ -7,5 +7,4 @@ class ExampleTest < MiniTest::Unit::TestCase
     # when preparing input data for the objects/methods you
     # wish to test.
   end
-
 end
