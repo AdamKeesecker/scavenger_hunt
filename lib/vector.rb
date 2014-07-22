@@ -18,7 +18,18 @@ class MyVector < Vector
     distance
   end
 
+  def <<(other_item)
+    MyVector.elements(self.to_a << other_item)
+  end
 
+  def self.get_angle(other)
+    cos_theta = (self[0]*other[0]) + (self[1]*other[1]) / ((other[0]**2+other[1]**2).sqrt) * ((self[0]**2+self[1]**2).sqrt)
+    arc_cos = Math.acos(cos_theta)
+  end
 
+  def get_angle(point1, point2)
+    cos_theta = (point1[0]*point2[0]) + (point1[1]*point2[1]) / ((point2[0]**2+point2[1]**2).sqrt) * ((point1[0]**2+point1[1]**2).sqrt)
+    arc_cos = Math.acos(cos_theta)
+  end
 
 end
