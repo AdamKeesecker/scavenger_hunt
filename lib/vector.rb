@@ -31,5 +31,15 @@ class MyVector < Vector
     cos_theta = (point1[0]*point2[0]) + (point1[1]*point2[1]) / ((point2[0]**2+point2[1]**2).sqrt) * ((point1[0]**2+point1[1]**2).sqrt)
     arc_cos = Math.acos(cos_theta)
   end
-
 end
+=begin
+  def self.angle(v1, v2)
+    v1.angle(v2)
+  end
+
+  def angle(v)
+    numerator = self.inner_product(v)
+    denominator = self.magnitude * v.magnitude
+    Math::acos(numerator/denominator).round(10)
+  end
+=end
